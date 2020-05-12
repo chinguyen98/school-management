@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { LessonModule } from './lesson/lesson.module';
 import { TypeOrmModule } from '@nestjs/typeorm'
-import { Lession } from './lesson/lesson.entity';
+import { Lesson } from './lesson/lesson.entity';
 
 @Module({
   imports: [
@@ -12,7 +12,7 @@ import { Lession } from './lesson/lesson.entity';
       synchronize: true,
       useUnifiedTopology: true,
       entities: [
-        Lession,
+        Lesson,
       ],
     }),
     GraphQLModule.forRoot({
